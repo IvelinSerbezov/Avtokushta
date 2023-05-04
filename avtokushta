@@ -1,0 +1,330 @@
+package gpi;
+
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+import java.awt.Toolkit;
+import java.awt.GridLayout;
+import java.awt.GridBagLayout;
+import javax.swing.JLabel;
+import java.awt.GridBagConstraints;
+import java.awt.Font;
+import javax.swing.SwingConstants;
+import javax.swing.border.TitledBorder;
+import javax.swing.border.EtchedBorder;
+import java.awt.Color;
+import javax.swing.JComboBox;
+import javax.swing.DefaultComboBoxModel;
+import javax.swing.JRadioButton;
+import javax.swing.ButtonGroup;
+import javax.swing.JCheckBox;
+import javax.swing.JButton;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+
+public class avtokushta extends JFrame {
+
+	private JPanel contentPane;
+	private final ButtonGroup buttonGroup = new ButtonGroup();
+	private final ButtonGroup buttonGroup_1 = new ButtonGroup();
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					avtokushta frame = new avtokushta();
+					frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the frame.
+	 */
+	public avtokushta() {
+		setIconImage(Toolkit.getDefaultToolkit().getImage("C:\\Users\\ivkat\\Downloads\\rsz_6453da275ba65.png"));
+		setTitle("www.mobile.bg");
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(100, 100, 778, 569);
+		contentPane = new JPanel();
+		contentPane.setBackground(Color.WHITE);
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+
+		setContentPane(contentPane);
+		contentPane.setLayout(null);
+		
+		JLabel label = new JLabel("СОФАУТО");
+		label.setHorizontalAlignment(SwingConstants.CENTER);
+		label.setFont(new Font("Dialog", Font.BOLD, 26));
+		label.setBounds(259, 10, 233, 49);
+		contentPane.add(label);
+		
+		JPanel panel = new JPanel();
+		panel.setBackground(Color.WHITE);
+		panel.setBorder(new TitledBorder(new EtchedBorder(EtchedBorder.LOWERED, new Color(255, 255, 255), new Color(160, 160, 160)), "\u041C\u0430\u0440\u043A\u0430, \u043C\u043E\u0434\u0435\u043B \u0438 \u0433\u043E\u0434\u0438\u043D\u0430", TitledBorder.LEADING, TitledBorder.TOP, null, new Color(0, 0, 0)));
+		panel.setBounds(30, 74, 233, 250);
+		contentPane.add(panel);
+		panel.setLayout(null);
+		
+		JLabel lblNewLabel = new JLabel("Марка и модел");
+		lblNewLabel.setFont(new Font("Tahoma", Font.PLAIN, 16));
+		lblNewLabel.setBounds(28, 38, 118, 27);
+		panel.add(lblNewLabel);
+		
+		JLabel lblNewLabel_1 = new JLabel("Година");
+		lblNewLabel_1.setFont(new Font("Tahoma", Font.PLAIN, 16));
+		lblNewLabel_1.setBounds(28, 131, 118, 27);
+		panel.add(lblNewLabel_1);
+		
+		final JComboBox cb1 = new JComboBox();
+		cb1.setBackground(Color.CYAN);
+		cb1.setModel(new DefaultComboBoxModel(new String[] {"Изберете марка и модел", "Audi A1", "Audi A2", "Audi A3", "Audi A4", "Audi A5", "Audi A6", "Audi A7", "Audi A8", "Audi S1", "Audi S2", "Audi S3", "Audi S4", "Audi S5", "Audi S6", "Audi S7", "Audi S8", "Audi Q2", "Audi Q3", "Audi Q4", "Audi Q5", "Audi Q6", "Audi Q7", "Audi Q8", "BMW Series 1", "BMW Series 2", "BMW Series 3", "BMW Series 4", "BMW Series 5", "BMW Series 6", "BMW Series 7", "BMW Series 8", "BMW M2", "BMW M3", "BMW M4", "BMW M5", "BMW M6", "BMW M8", "BMW X1", "BMW X2", "BMW X3", "BMW X4", "BMW X5", "BMW X6", "BMW X7", "Mercedes-Benz A-Class", "Mercedes-Benz B-Class", "Mercedes-Benz C-Class", "Mercedes-Benz E-Class", "Mercedes-Benz S-Class", "Mercedes-Benz G-Class", "Mercedes-Benz V-Class", "Lamborghini Huracan", "Lamborghini Gallardo", "Lamborghini Aventador", "Lamborghini Urus", "Ferarri 458 Italia", "Ferarri 488 ", "Ferarri 812 Superfast", "Ferarri F12", "Ferarri LaFerarri", "McLaren 570S", "McLaren 720S", "McLaren 765LT", "Rolls-Royce Cullian", "Rolls-Royce Ghost", "Rolls-Royce Phantom", "Rolls-Royce Wraith", ""}));
+		cb1.setBounds(28, 75, 171, 21);
+		panel.add(cb1);
+		
+		final JComboBox cb2 = new JComboBox();
+		cb2.setBackground(Color.CYAN);
+		cb2.setModel(new DefaultComboBoxModel(new String[] {"Изберете година", "2000", "2001", "2002", "2003", "2004", "2005", "2006", "2007", "2008", "2009", "2010", "2011", "2012", "2013", "2014", "2015", "2016", "2017", "2018", "2019", "2020", "2021", "2022", "2023"}));
+		cb2.setBounds(28, 168, 171, 21);
+		panel.add(cb2);
+		
+		JPanel panel_3_1 = new JPanel();
+		panel_3_1.setBackground(Color.WHITE);
+		panel_3_1.setBorder(new TitledBorder(new EtchedBorder(EtchedBorder.LOWERED, new Color(255, 255, 255), new Color(160, 160, 160)), "\u0412\u0430\u0448\u0430\u0442\u0430 \u0437\u0430\u044F\u0432\u043A\u0430", TitledBorder.LEADING, TitledBorder.TOP, null, new Color(0, 0, 0)));
+		panel_3_1.setBounds(30, 334, 476, 173);
+		contentPane.add(panel_3_1);
+		panel_3_1.setLayout(null);
+		
+		JLabel lblz1 = new JLabel("Марка и модел:");
+		lblz1.setFont(new Font("Tahoma", Font.PLAIN, 16));
+		lblz1.setBounds(10, 25, 118, 27);
+		panel_3_1.add(lblz1);
+		
+		JLabel lblz2 = new JLabel("Година:");
+		lblz2.setFont(new Font("Tahoma", Font.PLAIN, 16));
+		lblz2.setBounds(301, 25, 70, 27);
+		panel_3_1.add(lblz2);
+		
+		JLabel lblz3 = new JLabel("Тип двигател\r\n:");
+		lblz3.setFont(new Font("Tahoma", Font.PLAIN, 16));
+		lblz3.setBounds(10, 62, 118, 27);
+		panel_3_1.add(lblz3);
+		
+		JLabel lblz4 = new JLabel("Ск. кутия:");
+		lblz4.setFont(new Font("Tahoma", Font.PLAIN, 16));
+		lblz4.setBounds(301, 62, 80, 27);
+		panel_3_1.add(lblz4);
+		
+		JLabel lblz5 = new JLabel("Цвят:");
+		lblz5.setFont(new Font("Tahoma", Font.PLAIN, 16));
+		lblz5.setBounds(10, 99, 53, 27);
+		panel_3_1.add(lblz5);
+		
+		JLabel lblz6 = new JLabel("Екстри:");
+		lblz6.setFont(new Font("Tahoma", Font.PLAIN, 16));
+		lblz6.setBounds(10, 136, 70, 27);
+		panel_3_1.add(lblz6);
+		
+		final JLabel lblz11 = new JLabel("");
+		lblz11.setFont(new Font("Dialog", Font.PLAIN, 14));
+		lblz11.setBounds(130, 25, 314, 27);
+		panel_3_1.add(lblz11);
+		
+		final JLabel lblz22 = new JLabel("");
+		lblz22.setFont(new Font("Dialog", Font.PLAIN, 14));
+		lblz22.setBounds(362, 25, 124, 27);
+		panel_3_1.add(lblz22);
+		
+		final JLabel lblz33 = new JLabel("");
+		lblz33.setFont(new Font("Dialog", Font.PLAIN, 14));
+		lblz33.setBounds(116, 62, 124, 27);
+		panel_3_1.add(lblz33);
+		
+		final JLabel lblz55 = new JLabel("");
+		lblz55.setFont(new Font("Dialog", Font.PLAIN, 14));
+		lblz55.setBounds(57, 99, 409, 27);
+		panel_3_1.add(lblz55);
+		
+		final JLabel lblz66 = new JLabel("");
+		lblz66.setFont(new Font("Dialog", Font.PLAIN, 14));
+		lblz66.setBounds(67, 136, 399, 27);
+		panel_3_1.add(lblz66);
+		
+		final JLabel lblz44 = new JLabel("");
+		lblz44.setFont(new Font("Dialog", Font.PLAIN, 14));
+		lblz44.setBounds(384, 62, 124, 27);
+		panel_3_1.add(lblz44);
+		
+		JPanel panel_3 = new JPanel();
+		panel_3.setBackground(Color.WHITE);
+		panel_3.setLayout(null);
+		panel_3.setBorder(new TitledBorder(new EtchedBorder(EtchedBorder.LOWERED, new Color(255, 255, 255), new Color(160, 160, 160)), "\u0422\u0438\u043F \u0434\u0432\u0438\u0433\u0430\u0442\u0435\u043B \u0438 \u0441\u043A\u043E\u0440\u043E\u0441\u0442\u043D\u0430 \u043A\u0443\u0442\u0438\u044F", TitledBorder.LEADING, TitledBorder.TOP, null, new Color(0, 0, 0)));
+		panel_3.setBounds(278, 74, 233, 250);
+		contentPane.add(panel_3);
+		
+		JLabel lblNewLabel_2 = new JLabel("Тип двигател\r\n");
+		lblNewLabel_2.setFont(new Font("Tahoma", Font.PLAIN, 16));
+		lblNewLabel_2.setBounds(28, 38, 118, 27);
+		panel_3.add(lblNewLabel_2);
+		
+		JLabel lblNewLabel_1_1 = new JLabel("Скоростна кутия");
+		lblNewLabel_1_1.setFont(new Font("Tahoma", Font.PLAIN, 16));
+		lblNewLabel_1_1.setBounds(28, 131, 131, 27);
+		panel_3.add(lblNewLabel_1_1);
+		
+		final JRadioButton rb1 = new JRadioButton("Бензинов");
+		rb1.setBackground(Color.WHITE);
+		buttonGroup.add(rb1);
+		rb1.setBounds(28, 71, 103, 21);
+		panel_3.add(rb1);
+		
+		final JRadioButton rb2 = new JRadioButton("Дизелов");
+		rb2.setBackground(Color.WHITE);
+		buttonGroup.add(rb2);
+		rb2.setBounds(28, 104, 103, 21);
+		panel_3.add(rb2);
+		
+		final JRadioButton rb3 = new JRadioButton("Ръчна");
+		rb3.setBackground(Color.WHITE);
+		buttonGroup_1.add(rb3);
+		rb3.setBounds(28, 164, 103, 21);
+		panel_3.add(rb3);
+		
+		final JRadioButton rb4 = new JRadioButton("Автоматична");
+		rb4.setBackground(Color.WHITE);
+		buttonGroup_1.add(rb4);
+		rb4.setBounds(28, 201, 103, 21);
+		panel_3.add(rb4);
+		
+		JPanel panel_3_2 = new JPanel();
+		panel_3_2.setBackground(Color.WHITE);
+		panel_3_2.setLayout(null);
+		panel_3_2.setBorder(new TitledBorder(new EtchedBorder(EtchedBorder.LOWERED, new Color(255, 255, 255), new Color(160, 160, 160)), "\u0426\u0432\u044F\u0442 \u0438 \u0435\u043A\u0441\u0442\u0440\u0438", TitledBorder.LEADING, TitledBorder.TOP, null, new Color(0, 0, 0)));
+		panel_3_2.setBounds(521, 74, 233, 250);
+		contentPane.add(panel_3_2);
+		
+		JLabel lblNewLabel_2_1 = new JLabel("Цвят");
+		lblNewLabel_2_1.setFont(new Font("Tahoma", Font.PLAIN, 16));
+		lblNewLabel_2_1.setBounds(28, 38, 118, 27);
+		panel_3_2.add(lblNewLabel_2_1);
+		
+		JLabel lblNewLabel_1_1_1 = new JLabel("Екстри");
+		lblNewLabel_1_1_1.setFont(new Font("Tahoma", Font.PLAIN, 16));
+		lblNewLabel_1_1_1.setBounds(28, 131, 118, 27);
+		panel_3_2.add(lblNewLabel_1_1_1);
+		
+		final JComboBox cb3 = new JComboBox();
+		cb3.setBackground(Color.CYAN);
+		cb3.setModel(new DefaultComboBoxModel(new String[] {"Изберете цвят", "Бял", "Сив", "Черен", "Син", "Тъмно син", "Светло син", "Червен", "Ярко червен", "Зелен", "Тъмно зелен", "Сребро", "Лилаво", "Кафяво", "Металик", "Оранжев", "Жълт", "Сребърен", "Розов", "Графит", "Бронз", "Бордо"}));
+		cb3.setBounds(28, 75, 171, 21);
+		panel_3_2.add(cb3);
+		
+		final JCheckBox kb1 = new JCheckBox("Подгрев\r\n");
+		kb1.setBackground(Color.WHITE);
+		kb1.setBounds(28, 164, 93, 21);
+		panel_3_2.add(kb1);
+		
+		final JCheckBox kb2 = new JCheckBox("GPS");
+		kb2.setBackground(Color.WHITE);
+		kb2.setBounds(134, 164, 93, 21);
+		panel_3_2.add(kb2);
+		
+		final JCheckBox kb3 = new JCheckBox("Стерео");
+		kb3.setBackground(Color.WHITE);
+		kb3.setBounds(28, 187, 93, 21);
+		panel_3_2.add(kb3);
+		
+		final JCheckBox kb4 = new JCheckBox("Климатик");
+		kb4.setBackground(Color.WHITE);
+		kb4.setBounds(134, 187, 93, 21);
+		panel_3_2.add(kb4);
+		
+		final JCheckBox kb5 = new JCheckBox("Телевизор");
+		kb5.setBackground(Color.WHITE);
+		kb5.setBounds(28, 210, 93, 21);
+		panel_3_2.add(kb5);
+		
+		final JCheckBox kb6 = new JCheckBox("Шибедах");
+		kb6.setBackground(Color.WHITE);
+		kb6.setBounds(134, 210, 93, 21);
+		panel_3_2.add(kb6);
+		
+		JButton btn1 = new JButton("Заяви");
+		btn1.setBackground(Color.CYAN);
+		btn1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				String mod,god,cv;
+				mod=(String) cb1.getSelectedItem();
+				god=(String) cb2.getSelectedItem();
+				cv=(String) cb3.getSelectedItem();
+				if(rb1.isSelected())lblz33.setText("Бензинов");
+				if(rb2.isSelected())lblz33.setText("Дизелов");
+				if(rb3.isSelected())lblz44.setText("Ръчна");
+				if(rb4.isSelected())lblz44.setText("Автоматична");
+				lblz11.setText(mod);
+				lblz22.setText(god);
+				if(cv=="Червен")lblz55.setText("Червен (всички автомобили с този цвят имат 10% отстъпка)");
+				else lblz55.setText(cv);
+				
+				String eks="";
+				
+				if (kb1.isSelected())eks+="подгрев; ";
+				if (kb2.isSelected())eks+="GPS; ";
+				if (kb3.isSelected())eks+="стерео; ";
+				if (kb4.isSelected())eks+="климатик; ";
+				if (kb5.isSelected())eks+="телевизор; ";
+				if (kb6.isSelected())eks+="шибедах; ";
+				lblz66.setText(eks);
+				
+				
+			}
+		});
+		btn1.setFont(new Font("Tahoma", Font.PLAIN, 16));
+		btn1.setBounds(531, 349, 223, 40);
+		contentPane.add(btn1);
+		
+		JButton btn2 = new JButton("Изчисти");
+		btn2.setBackground(Color.CYAN);
+		btn2.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				cb1.setSelectedItem("Изберете марка и модел");
+				cb2.setSelectedItem("Изберете година");
+				cb3.setSelectedItem("Изберете цвят");
+				kb1.setSelected(false);
+				kb2.setSelected(false);
+				kb3.setSelected(false);
+				kb4.setSelected(false);
+				kb5.setSelected(false);
+				kb6.setSelected(false);
+				lblz11.setText("");
+				lblz22.setText("");
+				lblz33.setText("");
+				lblz44.setText("");
+				lblz55.setText("");
+				lblz66.setText("");
+			}
+		});
+		btn2.setFont(new Font("Tahoma", Font.PLAIN, 16));
+		btn2.setBounds(531, 399, 223, 40);
+		contentPane.add(btn2);
+		
+		JButton btn3 = new JButton("Изход");
+		btn3.setBackground(Color.CYAN);
+		btn3.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				System.exit(0);
+			}
+		});
+		btn3.setFont(new Font("Tahoma", Font.PLAIN, 16));
+		btn3.setBounds(531, 451, 223, 40);
+		contentPane.add(btn3);
+	}
+}
